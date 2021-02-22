@@ -36,12 +36,11 @@ export default function App() {
       const randomJoke = Math.floor(
         Math.random() * result.data.result.length + 1
       )
-      console.log(randomJoke)
       setState({
         ...state,
         joke: result.data.result[randomJoke].value,
       })
-    } catch {
+    } catch (e) {
       setState({
         ...state,
         joke:
@@ -65,7 +64,7 @@ export default function App() {
             </div>
           </div>
           <div>
-            <button className="btn btn-warning btn-lg" onClick={fetchMyJoke}>
+            <button className="btn btn-warning" onClick={fetchMyJoke}>
               Generate Joke
             </button>
           </div>
