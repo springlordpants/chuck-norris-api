@@ -1,4 +1,16 @@
-.chuck {
-  width: 100%;
+body {
+  background-color: royalblue;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  color: yellow;
+  text-transform: uppercase;
+  font-size: 50px;
+  text-shadow: 3px 3px black;
 }
 /*# sourceMappingURL=styles.css.map */

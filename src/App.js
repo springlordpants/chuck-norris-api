@@ -7,7 +7,7 @@ export default function App() {
       <div className="row">
         <div className="col-6">
           <h1 className="title">Chuck Norris API</h1>
-          <img src={Chuck} alt="chuck" className="chuck" />
+          <img src={Chuck} alt="chuck" />
         </div>
       </div>
     </div>
