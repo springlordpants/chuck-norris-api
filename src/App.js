@@ -9,7 +9,6 @@ export default function App() {
           <h1 className="title">Chuck Norris API</h1>
           <img src={Chuck} alt="chuck" />
         </div>
-
         <div className="col-6 search-joke-col">
           <div className="card">
             <div className="card-header">Search for a word</div>
@@ -21,6 +20,10 @@ export default function App() {
             <button className="btn btn-warning btn-lg">Generate Joke</button>
           </div>
         </div>
+      </div>
+      <div className="joke">
+        <h2>Here is the joke!</h2>
+        <h4>Chuck Norris is not afraid of anything</h4>
       </div>
     </div>
   )

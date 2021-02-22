@@ -7,6 +7,17 @@ img {
   max-width: 100%;
 }
 
+h2,
+h4 {
+  color: white;
+}
+
+h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px black;
+}
+
 .title {
   color: yellow;
   text-transform: uppercase;
@@ -20,5 +31,9 @@ img {
 
 .btn {
   margin-top: 20px;
+}
+
+.joke {
+  margin-top: 50px;
 }
 /*# sourceMappingURL=styles.css.map */
