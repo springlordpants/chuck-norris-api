@@ -1,8 +1,12 @@
 import React, { useEffect } from "react"
 import Chuck from "./media/chuck.jpg"
+import axios from "axios"
 
 export default function App() {
-  useEffect(() => {}, [])
+  useEffect(async () => {
+    const result = await axios.get("https://api.chucknorris.io/jokes/random")
+    console.log(result.data.value)
+  }, [])
 
   return (
     <div className="container">
@@ -15,7 +19,7 @@ export default function App() {
           <div className="card">
             <div className="card-header">Search for a word</div>
             <div className="card-body">
-              <input class="search-option" type="text" />
+              <input className="search-option" type="text" />
             </div>
           </div>
           <div>
