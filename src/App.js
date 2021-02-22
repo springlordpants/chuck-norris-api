@@ -1,5 +1,9 @@
 import React from "react"
 
 export default function App() {
-  return <div>Testing one two</div>
+  return (
+    <div>
+      <h1>Chuck Norris API</h1>
+    </div>
+  )
 }
