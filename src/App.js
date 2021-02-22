@@ -41,7 +41,7 @@ export default function App() {
       </div>
       <div className="joke">
         <h2>Here is the joke!</h2>
-        <h4>Chuck Norris is not afraid of anything</h4>
+        <h4>{state.joke}</h4>
       </div>
     </div>
   )
