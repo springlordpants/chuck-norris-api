@@ -13,4 +13,12 @@ img {
   font-size: 50px;
   text-shadow: 3px 3px black;
 }
+
+.card {
+  margin-top: 70px;
+}
+
+.btn {
+  margin-top: 20px;
+}
 /*# sourceMappingURL=styles.css.map */
