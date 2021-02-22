@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Chuck from "./media/chuck.jpg"
 
 export default function App() {
+  useEffect(() => {}, [])
+
   return (
     <div className="container">
       <div className="row">
