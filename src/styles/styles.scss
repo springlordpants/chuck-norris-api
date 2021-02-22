@@ -23,10 +23,16 @@ h2 {
   text-transform: uppercase;
   font-size: 50px;
   text-shadow: 3px 3px rgb(0, 0, 0);
+  @media (max-width: 767px) {
+    font-size: 35px;
+  }
 }
 
 .card {
   margin-top: 70px;
+  @media (max-width: 767px) {
+    margin-top: 25px;
+  }
 }
 
 .btn {
@@ -35,4 +41,7 @@ h2 {
 
 .joke {
   margin-top: 50px;
+  @media (max-width: 767px) {
+    margin-top: 25px;
+  }
 }

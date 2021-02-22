@@ -6,6 +6,7 @@ export default function App() {
   const [state, setState] = useState({
     joke: "",
     searchKeyword: "",
+    searchURL: "https://api.chucknorris.io/jokes/search?query=",
   })
 
   useEffect(() => {
@@ -22,21 +23,41 @@ export default function App() {
   }
 
   const searchJoke = (event) => {
-    console.log(event.target.value)
     setState({
       ...state,
       searchKeyword: event.target.value,
     })
   }
 
+  const fetchMyJoke = async () => {
+    const result = await axios.get(state.searchURL + state.searchKeyword)
+
+    try {
+      const randomJoke = Math.floor(
+        Math.random() * result.data.result.length + 1
+      )
+      console.log(randomJoke)
+      setState({
+        ...state,
+        joke: result.data.result[randomJoke].value,
+      })
+    } catch {
+      setState({
+        ...state,
+        joke:
+          "This joke does not exist because Chuck Norris roundhouse kicked it into the sun!",
+      })
+    }
+  }
+
   return (
     <div className="container">
       <div className="row">
-        <div className="col-6">
+        <div className="col-md-6 col-sm-3">
           <h1 className="title">Chuck Norris API</h1>
           <img src={Chuck} alt="chuck" />
         </div>
-        <div className="col-6 search-joke-col">
+        <div className="col-md-6 col-sm-3  search-joke-col">
           <div className="card">
             <div className="card-header">Search for a word</div>
             <div className="card-body">
@@ -44,7 +65,9 @@ export default function App() {
             </div>
           </div>
           <div>
-            <button className="btn btn-warning btn-lg">Generate Joke</button>
+            <button className="btn btn-warning btn-lg" onClick={fetchMyJoke}>
+              Generate Joke
+            </button>
           </div>
         </div>
       </div>

@@ -25,8 +25,20 @@ h2 {
   text-shadow: 3px 3px black;
 }
 
+@media (max-width: 767px) {
+  .title {
+    font-size: 35px;
+  }
+}
+
 .card {
   margin-top: 70px;
+}
+
+@media (max-width: 767px) {
+  .card {
+    margin-top: 25px;
+  }
 }
 
 .btn {
@@ -35,5 +47,11 @@ h2 {
 
 .joke {
   margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  .joke {
+    margin-top: 25px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
