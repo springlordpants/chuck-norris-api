@@ -16,6 +16,9 @@ h2 {
   font-size: 40px;
   text-transform: uppercase;
   text-shadow: 2px 2px rgb(0, 0, 0);
+  @media (max-width: 767px) {
+    font-size: 25px;
+  }
 }
 
 .title {
