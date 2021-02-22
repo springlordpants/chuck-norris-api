@@ -1,12 +1,24 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Chuck from "./media/chuck.jpg"
 import axios from "axios"
 
 export default function App() {
-  useEffect(async () => {
+  const [state, setState] = useState({
+    joke: "",
+  })
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const fetchData = async () => {
     const result = await axios.get("https://api.chucknorris.io/jokes/random")
     console.log(result.data.value)
-  }, [])
+    setState({
+      ...state,
+      joke: result.data.value,
+    })
+  }
 
   return (
     <div className="container">
