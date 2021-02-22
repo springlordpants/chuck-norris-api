@@ -5,6 +5,7 @@ import axios from "axios"
 export default function App() {
   const [state, setState] = useState({
     joke: "",
+    searchKeyword: "",
   })
 
   useEffect(() => {
@@ -20,6 +21,14 @@ export default function App() {
     })
   }
 
+  const searchJoke = (event) => {
+    console.log(event.target.value)
+    setState({
+      ...state,
+      searchKeyword: event.target.value,
+    })
+  }
+
   return (
     <div className="container">
       <div className="row">
@@ -31,7 +40,7 @@ export default function App() {
           <div className="card">
             <div className="card-header">Search for a word</div>
             <div className="card-body">
-              <input className="search-option" type="text" />
+              <input type="text" onChange={searchJoke} />
             </div>
           </div>
           <div>
