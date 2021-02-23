@@ -10,12 +10,11 @@ export default function App() {
   })
 
   useEffect(() => {
-    fetchData()
+    fetchData() // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const fetchData = async () => {
     const result = await axios.get("https://api.chucknorris.io/jokes/random")
-    console.log(result.data.value)
     setState({
       ...state,
       joke: result.data.value,
@@ -52,11 +51,11 @@ export default function App() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-6 col-sm-3">
+        <div className="col-md-6 col-sm-6">
           <h1 className="title">Chuck Norris API</h1>
           <img src={Chuck} alt="chuck" />
         </div>
-        <div className="col-md-6 col-sm-3  search-joke-col">
+        <div className="col-md-6 col-sm-6 search-joke-col">
           <div className="card">
             <div className="card-header">Search for a word</div>
             <div className="card-body">
