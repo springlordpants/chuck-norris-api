@@ -27,14 +27,8 @@ h2 {
 .title {
   color: yellow;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 35px;
   text-shadow: 3px 3px black;
-}
-
-@media (max-width: 767px) {
-  .title {
-    font-size: 35px;
-  }
 }
 
 .card {

@@ -52,7 +52,7 @@ export default function App() {
     <div className="container">
       <div className="row">
         <div className="col-md-6 col-sm-6">
-          <h1 className="title">Chuck Norris API</h1>
+          <h1 className="title">Chuck Norris Joke Generator</h1>
           <img src={Chuck} alt="chuck" />
         </div>
         <div className="col-md-6 col-sm-6 search-joke-col">
